@@ -14,6 +14,34 @@
 # TODO:ログファイルの書き出し
 # TODO:ffmpegのコマンドを書き出さない設定
 
+''' pythonファイルとデータの構成図
+From
+|- videotape_inspection_sheet.xlsx(desktop)
+|- capture_HDD
+    |- video_id1_title_mono_720x486_preservation_master.mov
+    |- video_id2_title_mono_720x486_preservation_master.mov
+|- video_to_PMfile.py
+
+to
+|- videotape_inspection_sheet.xlsx(desktop)
+|- capture_HDD
+    |- video_id1_title_mono_720x486_preservation_master.mov
+    |- video_id2_title_mono_720x486_preservation_master.mov
+    |- video_id3_title_mono_720x486_preservation_master.mov
+|- video_to_PMfile.py
+|- KCM
+    |- video_id1_title
+        |- video_id1_title_mono_720x486_preservation_master.mov
+        |- video_id1_title_mono_720x486_access_master.mp4
+        |- video_id1_title_mono_720x486_preservation_master.mov.md5
+        |- video_id1_title_mono_720x486_access_master.mp4.md5
+    |- video_id2_title
+        |- video_id2_title_mono_720x486_preservation_master.mov
+        |- video_id2_title_mono_720x486_access_master.mp4
+        |- video_id2_title_mono_720x486_preservation_master.mov.md5
+        |- video_id2_title_mono_720x486_access_master.mp4.md5
+'''
+
 import datetime
 import glob
 import os
